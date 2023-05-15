@@ -22,6 +22,14 @@ def isDate(str):
         return False
 
 
+def count_unique_dates(data):
+    dates = set()
+    for row in data:
+        dates.add(row[0])
+
+    return len(dates)
+
+
 def getFileName():
     filename.set(askopenfilename())
 

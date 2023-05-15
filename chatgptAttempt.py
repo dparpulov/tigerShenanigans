@@ -26,13 +26,13 @@ amount_el_energy_daytime = 'КОЛИЧЕСТВО ЕЛ. ЕНЕРГИЯ (м/у 08:
 owed_price_energy_daytime = 'ДЪЛЖИМА СУМА ЗА ЕЛ. ЕНЕРГИЯ (м/у 08:00-16:00) (лв.)'
 
 
-def getDayOfWeek(date):
-    return datetime.strptime(date, '%d.%m.%Y').strftime('%A')
+def getDayOfWeek(date_string):
+    return datetime.strptime(date_string, '%d.%m.%Y').strftime('%A')
 
 
-def is_valid_date(date):
+def is_valid_date(date_string):
     try:
-        datetime.strptime(date, '%d.%m.%Y')
+        datetime.strptime(date_string, '%d.%m.%Y')
         return True
     except:
         return False
